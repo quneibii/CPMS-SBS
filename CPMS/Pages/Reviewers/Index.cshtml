@@ -1,0 +1,324 @@
+﻿@page
+@model CPMS.Pages.Reviewers.IndexModel
+
+@{
+    ViewData["Title"] = "Reviewers";
+}
+
+<h1>Reviewers</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].MiddleInitial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Affiliation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].AnalysisOfAlgorithms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Applications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Architecture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ArtificialIntelligence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ComputerEngineering)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Curriculum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].DataStructures)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Databases)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].DistancedLearning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].DistributedSystems)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].EthicalSocietalIssues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].FirstYearComputing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].GenderIssues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].GrantWriting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].GraphicsImageProcessing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].HumanComputerInteraction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].LaboratoryEnvironments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Literacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].MathematicsInComputing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Multimedia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].NetworkingDataCommunications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].NonMajorCourses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ObjectOrientedIssues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].OperatingSystems)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ParallelProcessing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Pedagogy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ProgrammingLanguages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Research)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Security)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].SoftwareEngineering)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].SystemsAnalysisAndDesign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].UsingTechnologyInTheClassroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].WebAndInternetProgramming)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].Other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].OtherDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer[0].ReviewsAcknowledged)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Reviewer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleInitial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Affiliation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnalysisOfAlgorithms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Applications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Architecture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtificialIntelligence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComputerEngineering)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curriculum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataStructures)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Databases)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistancedLearning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistributedSystems)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EthicalSocietalIssues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstYearComputing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GenderIssues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrantWriting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GraphicsImageProcessing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HumanComputerInteraction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaboratoryEnvironments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Literacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MathematicsInComputing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Multimedia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetworkingDataCommunications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NonMajorCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObjectOrientedIssues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperatingSystems)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParallelProcessing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pedagogy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgrammingLanguages)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Research)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Security)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoftwareEngineering)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemsAnalysisAndDesign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsingTechnologyInTheClassroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebAndInternetProgramming)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewsAcknowledged)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ReviewerId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ReviewerId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ReviewerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

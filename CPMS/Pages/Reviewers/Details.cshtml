@@ -1,0 +1,313 @@
+﻿@page
+@model CPMS.Pages.Reviewers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Reviewer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Active)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Active)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.MiddleInitial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.MiddleInitial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Affiliation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Affiliation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ZipCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ZipCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.PhoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.EmailAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.EmailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.AnalysisOfAlgorithms)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.AnalysisOfAlgorithms)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Applications)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Applications)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Architecture)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Architecture)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ArtificialIntelligence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ArtificialIntelligence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ComputerEngineering)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ComputerEngineering)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Curriculum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Curriculum)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.DataStructures)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.DataStructures)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Databases)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Databases)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.DistancedLearning)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.DistancedLearning)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.DistributedSystems)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.DistributedSystems)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.EthicalSocietalIssues)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.EthicalSocietalIssues)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.FirstYearComputing)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.FirstYearComputing)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.GenderIssues)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.GenderIssues)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.GrantWriting)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.GrantWriting)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.GraphicsImageProcessing)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.GraphicsImageProcessing)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.HumanComputerInteraction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.HumanComputerInteraction)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.LaboratoryEnvironments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.LaboratoryEnvironments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Literacy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Literacy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.MathematicsInComputing)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.MathematicsInComputing)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Multimedia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Multimedia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.NetworkingDataCommunications)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.NetworkingDataCommunications)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.NonMajorCourses)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.NonMajorCourses)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ObjectOrientedIssues)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ObjectOrientedIssues)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.OperatingSystems)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.OperatingSystems)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ParallelProcessing)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ParallelProcessing)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Pedagogy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Pedagogy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ProgrammingLanguages)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ProgrammingLanguages)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Research)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Research)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Security)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Security)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.SoftwareEngineering)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.SoftwareEngineering)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.SystemsAnalysisAndDesign)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.SystemsAnalysisAndDesign)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.UsingTechnologyInTheClassroom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.UsingTechnologyInTheClassroom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.WebAndInternetProgramming)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.WebAndInternetProgramming)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.Other)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.Other)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.OtherDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.OtherDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reviewer.ReviewsAcknowledged)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reviewer.ReviewsAcknowledged)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Reviewer.ReviewerId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

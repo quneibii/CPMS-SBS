@@ -1,0 +1,151 @@
+﻿@page
+@model CPMS.Pages.Reviews.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.AppropriatenessOfTopic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.AppropriatenessOfTopic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.TimelinessOfTopic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.TimelinessOfTopic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.SupportiveEvidence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.SupportiveEvidence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.TechnicalQuality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.TechnicalQuality)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.ScopeOfCoverage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.ScopeOfCoverage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.CitationOfPreviousWork)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.CitationOfPreviousWork)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.Originality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.Originality)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.ContentComments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.ContentComments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.OrganizationOfPaper)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.OrganizationOfPaper)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.ClarityOfMainMessage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.ClarityOfMainMessage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.Mechanics)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.Mechanics)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.WrittenDocumentComments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.WrittenDocumentComments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.SuitabilityForPresentation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.SuitabilityForPresentation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.PotentialInterestInTopic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.PotentialInterestInTopic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.PotentialForOralPresentationComments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.PotentialForOralPresentationComments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.OverallRating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.OverallRating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.OverallRatingComments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.OverallRatingComments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.ComfortLevelTopic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.ComfortLevelTopic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.ComfortLevelAcceptability)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.ComfortLevelAcceptability)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.Complete)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.Complete)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.Paper)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.Paper.PaperId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Review.Reviewer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Review.Reviewer.ReviewerId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Review.ReviewId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
