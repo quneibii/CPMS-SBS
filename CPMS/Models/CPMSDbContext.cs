@@ -29,7 +29,7 @@ namespace CPMS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=GALAXYBOOK360-S;Database=CPMS;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-I0TPUTU;Database=CPMS;Trusted_Connection=True;");
             }
         }
 
