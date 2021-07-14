@@ -7,6 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
+
+//Setup for paper Class to submit paper and inormation about the paper.
 namespace CPMS.Models
 {
     public partial class Paper
@@ -18,26 +20,31 @@ namespace CPMS.Models
 
         [Key]
         [Column("PaperID")]
+        [Required]
         public int PaperId { get; set; }
 
 
         [Column("AuthorID")]
+        [Required]
         public int? AuthorId { get; set; }
 
-
+        [Required]
         public bool? Active { get; set; }//need to change to checkbox
 
 
         [StringLength(100)]
+        [Required]
         [Display( Name = "Filename Original")]
         public string FilenameOriginal { get; set; }
 
 
         [StringLength(100)]
+        [Required]
         public string Filename { get; set; }
 
 
         [StringLength(200)]
+        [Required]
         public string Title { get; set; }
 
 
@@ -75,9 +82,9 @@ namespace CPMS.Models
 
 
         public bool? Databases { get; set; }//checkbox
+        
+        
         [Display(Name = "Distance Learning")]
-
-
         public bool? DistanceLearning { get; set; }//? CheckBox? is this a subject or saying if you did DL?
 
 
