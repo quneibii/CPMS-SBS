@@ -54,7 +54,8 @@ namespace CPMS.Models
 
         [Column(TypeName = "decimal(3, 2)")]
         [Display(Name = "Scope of Coverage")]
-public decimal? ScopeOfCoverage { get; set; }
+        [Required]
+        public decimal? ScopeOfCoverage { get; set; }
         [Column(TypeName = "decimal(3, 2)")]
         [Display(Name = "Citation of Previous Work")]
         [Required]
