@@ -13,6 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CPMS
 {
@@ -31,9 +35,27 @@ namespace CPMS
             services.AddDbContext<CPMSDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("CPMS")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<CPMSDbContext>();
-            services.AddRazorPages();
+
+            // cookie policy and authentication
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.ConsentCookie.IsEssential = true;  //login cookie is marked essential
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(cookieOptions => {
+                cookieOptions.Cookie.Name = "UserLoginCookie";
+                cookieOptions.LoginPath = "/";
+            });
+
+
+            // require authorization for table use
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AuthorizeFolder("/Authors");
+                options.Conventions.AuthorizeFolder("/Papers");
+                options.Conventions.AuthorizeFolder("/Reviews");
+                options.Conventions.AuthorizeFolder("/Reviewers");
+            });
 
         }
 
@@ -48,7 +70,6 @@ namespace CPMS
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 

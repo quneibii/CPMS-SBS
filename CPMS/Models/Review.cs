@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
-// If you have enabled NRTs for your project, then un-comment the following line:
-// #nullable disable
+// Review Table Model 
+// Has all necessary variables matching database
+// Modifies display name appropriately
 
 //Setup for Review Class, dealing with ratings and reviews of papers.
 namespace CPMS.Models
 {
-    public partial class Review
+    public partial class Review 
     {
         [Key]
         [Column("ReviewID")]
@@ -54,10 +54,7 @@ namespace CPMS.Models
 
         [Column(TypeName = "decimal(3, 2)")]
         [Display(Name = "Scope of Coverage")]
-        [Required]
-        public decimal? ScopeOfCoverage { get; set; }
-
-
+public decimal? ScopeOfCoverage { get; set; }
         [Column(TypeName = "decimal(3, 2)")]
         [Display(Name = "Citation of Previous Work")]
         [Required]
