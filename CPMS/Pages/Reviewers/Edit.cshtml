@@ -5,7 +5,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Create</h1>
 
 <h4>Reviewer</h4>
 <hr />
@@ -13,261 +13,393 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Reviewer.ReviewerId" />
-            <div class="form-group">
-                <label asp-for="Reviewer.Active" class="control-label"></label>
-                <input asp-for="Reviewer.Active" class="form-control" />
+            <input type ="hidden" asp-for="Reviewer.ReviewerId" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Active" /> @Html.DisplayNameFor(model => model.Reviewer.Active)
+                </label>
                 <span asp-validation-for="Reviewer.Active" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.FirstName" class="control-label"></label>
                 <input asp-for="Reviewer.FirstName" class="form-control" />
                 <span asp-validation-for="Reviewer.FirstName" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.MiddleInitial" class="control-label"></label>
                 <input asp-for="Reviewer.MiddleInitial" class="form-control" />
                 <span asp-validation-for="Reviewer.MiddleInitial" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.LastName" class="control-label"></label>
                 <input asp-for="Reviewer.LastName" class="form-control" />
                 <span asp-validation-for="Reviewer.LastName" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.Affiliation" class="control-label"></label>
                 <input asp-for="Reviewer.Affiliation" class="form-control" />
                 <span asp-validation-for="Reviewer.Affiliation" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.Department" class="control-label"></label>
                 <input asp-for="Reviewer.Department" class="form-control" />
                 <span asp-validation-for="Reviewer.Department" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.Address" class="control-label"></label>
                 <input asp-for="Reviewer.Address" class="form-control" />
                 <span asp-validation-for="Reviewer.Address" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.City" class="control-label"></label>
                 <input asp-for="Reviewer.City" class="form-control" />
                 <span asp-validation-for="Reviewer.City" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.State" class="control-label"></label>
                 <input asp-for="Reviewer.State" class="form-control" />
                 <span asp-validation-for="Reviewer.State" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.ZipCode" class="control-label"></label>
                 <input asp-for="Reviewer.ZipCode" class="form-control" />
                 <span asp-validation-for="Reviewer.ZipCode" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.PhoneNumber" class="control-label"></label>
                 <input asp-for="Reviewer.PhoneNumber" class="form-control" />
                 <span asp-validation-for="Reviewer.PhoneNumber" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.EmailAddress" class="control-label"></label>
                 <input asp-for="Reviewer.EmailAddress" class="form-control" />
                 <span asp-validation-for="Reviewer.EmailAddress" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.Password" class="control-label"></label>
                 <input asp-for="Reviewer.Password" class="form-control" />
                 <span asp-validation-for="Reviewer.Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.AnalysisOfAlgorithms" class="control-label"></label>
-                <input asp-for="Reviewer.AnalysisOfAlgorithms" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.AnalysisOfAlgorithms" /> @Html.DisplayNameFor(model => model.Reviewer.AnalysisOfAlgorithms)
+                </label>
                 <span asp-validation-for="Reviewer.AnalysisOfAlgorithms" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Applications" class="control-label"></label>
-                <input asp-for="Reviewer.Applications" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Applications" /> @Html.DisplayNameFor(model => model.Reviewer.Applications)
+                </label>
                 <span asp-validation-for="Reviewer.Applications" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Architecture" class="control-label"></label>
-                <input asp-for="Reviewer.Architecture" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Architecture" /> @Html.DisplayNameFor(model => model.Reviewer.Architecture)
+                </label>
                 <span asp-validation-for="Reviewer.Architecture" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ArtificialIntelligence" class="control-label"></label>
-                <input asp-for="Reviewer.ArtificialIntelligence" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ArtificialIntelligence" /> @Html.DisplayNameFor(model => model.Reviewer.ArtificialIntelligence)
+                </label>
                 <span asp-validation-for="Reviewer.ArtificialIntelligence" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ComputerEngineering" class="control-label"></label>
-                <input asp-for="Reviewer.ComputerEngineering" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ComputerEngineering" /> @Html.DisplayNameFor(model => model.Reviewer.ComputerEngineering)
+                </label>
                 <span asp-validation-for="Reviewer.ComputerEngineering" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Curriculum" class="control-label"></label>
-                <input asp-for="Reviewer.Curriculum" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Curriculum" /> @Html.DisplayNameFor(model => model.Reviewer.Curriculum)
+                </label>
                 <span asp-validation-for="Reviewer.Curriculum" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.DataStructures" class="control-label"></label>
-                <input asp-for="Reviewer.DataStructures" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.DataStructures" /> @Html.DisplayNameFor(model => model.Reviewer.DataStructures)
+                </label>
                 <span asp-validation-for="Reviewer.DataStructures" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Databases" class="control-label"></label>
-                <input asp-for="Reviewer.Databases" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Databases" /> @Html.DisplayNameFor(model => model.Reviewer.Databases)
+                </label>
                 <span asp-validation-for="Reviewer.Databases" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.DistancedLearning" class="control-label"></label>
-                <input asp-for="Reviewer.DistancedLearning" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.DistancedLearning" /> @Html.DisplayNameFor(model => model.Reviewer.DistancedLearning)
+                </label>
                 <span asp-validation-for="Reviewer.DistancedLearning" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.DistributedSystems" class="control-label"></label>
-                <input asp-for="Reviewer.DistributedSystems" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.DistributedSystems" /> @Html.DisplayNameFor(model => model.Reviewer.DistributedSystems)
+                </label>
                 <span asp-validation-for="Reviewer.DistributedSystems" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.EthicalSocietalIssues" class="control-label"></label>
-                <input asp-for="Reviewer.EthicalSocietalIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.EthicalSocietalIssues" /> @Html.DisplayNameFor(model => model.Reviewer.EthicalSocietalIssues)
+                </label>
                 <span asp-validation-for="Reviewer.EthicalSocietalIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.FirstYearComputing" class="control-label"></label>
-                <input asp-for="Reviewer.FirstYearComputing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.FirstYearComputing" /> @Html.DisplayNameFor(model => model.Reviewer.FirstYearComputing)
+                </label>
                 <span asp-validation-for="Reviewer.FirstYearComputing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.GenderIssues" class="control-label"></label>
-                <input asp-for="Reviewer.GenderIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.GenderIssues" /> @Html.DisplayNameFor(model => model.Reviewer.GenderIssues)
+                </label>
                 <span asp-validation-for="Reviewer.GenderIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.GrantWriting" class="control-label"></label>
-                <input asp-for="Reviewer.GrantWriting" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.GrantWriting" /> @Html.DisplayNameFor(model => model.Reviewer.GrantWriting)
+                </label>
                 <span asp-validation-for="Reviewer.GrantWriting" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.GraphicsImageProcessing" class="control-label"></label>
-                <input asp-for="Reviewer.GraphicsImageProcessing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.GraphicsImageProcessing" /> @Html.DisplayNameFor(model => model.Reviewer.GraphicsImageProcessing)
+                </label>
                 <span asp-validation-for="Reviewer.GraphicsImageProcessing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.HumanComputerInteraction" class="control-label"></label>
-                <input asp-for="Reviewer.HumanComputerInteraction" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.HumanComputerInteraction" /> @Html.DisplayNameFor(model => model.Reviewer.HumanComputerInteraction)
+                </label>
                 <span asp-validation-for="Reviewer.HumanComputerInteraction" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.LaboratoryEnvironments" class="control-label"></label>
-                <input asp-for="Reviewer.LaboratoryEnvironments" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.LaboratoryEnvironments" /> @Html.DisplayNameFor(model => model.Reviewer.LaboratoryEnvironments)
+                </label>
                 <span asp-validation-for="Reviewer.LaboratoryEnvironments" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Literacy" class="control-label"></label>
-                <input asp-for="Reviewer.Literacy" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Literacy" /> @Html.DisplayNameFor(model => model.Reviewer.Literacy)
+                </label>
                 <span asp-validation-for="Reviewer.Literacy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.MathematicsInComputing" class="control-label"></label>
-                <input asp-for="Reviewer.MathematicsInComputing" class="form-control" />
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.MathematicsInComputing" /> @Html.DisplayNameFor(model => model.Reviewer.MathematicsInComputing)
+                </label>
                 <span asp-validation-for="Reviewer.MathematicsInComputing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Multimedia" class="control-label"></label>
-                <input asp-for="Reviewer.Multimedia" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Multimedia" /> @Html.DisplayNameFor(model => model.Reviewer.Multimedia)
+                </label>
                 <span asp-validation-for="Reviewer.Multimedia" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.NetworkingDataCommunications" class="control-label"></label>
-                <input asp-for="Reviewer.NetworkingDataCommunications" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.NetworkingDataCommunications" /> @Html.DisplayNameFor(model => model.Reviewer.NetworkingDataCommunications)
+                </label>
                 <span asp-validation-for="Reviewer.NetworkingDataCommunications" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.NonMajorCourses" class="control-label"></label>
-                <input asp-for="Reviewer.NonMajorCourses" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.NonMajorCourses" /> @Html.DisplayNameFor(model => model.Reviewer.NonMajorCourses)
+                </label>
                 <span asp-validation-for="Reviewer.NonMajorCourses" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ObjectOrientedIssues" class="control-label"></label>
-                <input asp-for="Reviewer.ObjectOrientedIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ObjectOrientedIssues" /> @Html.DisplayNameFor(model => model.Reviewer.ObjectOrientedIssues)
+                </label>
                 <span asp-validation-for="Reviewer.ObjectOrientedIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.OperatingSystems" class="control-label"></label>
-                <input asp-for="Reviewer.OperatingSystems" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.OperatingSystems" /> @Html.DisplayNameFor(model => model.Reviewer.OperatingSystems)
+                </label>
                 <span asp-validation-for="Reviewer.OperatingSystems" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ParallelProcessing" class="control-label"></label>
-                <input asp-for="Reviewer.ParallelProcessing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ParallelProcessing" /> @Html.DisplayNameFor(model => model.Reviewer.ParallelProcessing)
+                </label>
                 <span asp-validation-for="Reviewer.ParallelProcessing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Pedagogy" class="control-label"></label>
-                <input asp-for="Reviewer.Pedagogy" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Pedagogy" /> @Html.DisplayNameFor(model => model.Reviewer.Pedagogy)
+                </label>
                 <span asp-validation-for="Reviewer.Pedagogy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ProgrammingLanguages" class="control-label"></label>
-                <input asp-for="Reviewer.ProgrammingLanguages" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ProgrammingLanguages" /> @Html.DisplayNameFor(model => model.Reviewer.ProgrammingLanguages)
+                </label>
                 <span asp-validation-for="Reviewer.ProgrammingLanguages" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Research" class="control-label"></label>
-                <input asp-for="Reviewer.Research" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Research" /> @Html.DisplayNameFor(model => model.Reviewer.Research)
+                </label>
                 <span asp-validation-for="Reviewer.Research" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Security" class="control-label"></label>
-                <input asp-for="Reviewer.Security" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Security" /> @Html.DisplayNameFor(model => model.Reviewer.Security)
+                </label>
                 <span asp-validation-for="Reviewer.Security" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.SoftwareEngineering" class="control-label"></label>
-                <input asp-for="Reviewer.SoftwareEngineering" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.SoftwareEngineering" /> @Html.DisplayNameFor(model => model.Reviewer.SoftwareEngineering)
+                </label>
                 <span asp-validation-for="Reviewer.SoftwareEngineering" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.SystemsAnalysisAndDesign" class="control-label"></label>
-                <input asp-for="Reviewer.SystemsAnalysisAndDesign" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.SystemsAnalysisAndDesign" /> @Html.DisplayNameFor(model => model.Reviewer.SystemsAnalysisAndDesign)
+                </label>
                 <span asp-validation-for="Reviewer.SystemsAnalysisAndDesign" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.UsingTechnologyInTheClassroom" class="control-label"></label>
-                <input asp-for="Reviewer.UsingTechnologyInTheClassroom" class="form-control" />
-                <span asp-validation-for="Reviewer.UsingTechnologyInTheClassroom" class="text-danger"></span>
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.UsingTechnologyInTheClassroom" /> @Html.DisplayNameFor(model => model.Reviewer.UsingTechnologyInTheClassroom)
+                </label>
             </div>
+
+
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Reviewer.WebAndInternetProgramming" /> @Html.DisplayNameFor(model => model.Reviewer.WebAndInternetProgramming)
                 </label>
+                <span asp-validation-for="Reviewer.WebAndInternetProgramming" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.Other" class="control-label"></label>
-                <input asp-for="Reviewer.Other" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.Other" /> @Html.DisplayNameFor(model => model.Reviewer.Other)
+                </label>
                 <span asp-validation-for="Reviewer.Other" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Reviewer.OtherDescription" class="control-label"></label>
                 <input asp-for="Reviewer.OtherDescription" class="form-control" />
                 <span asp-validation-for="Reviewer.OtherDescription" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Reviewer.ReviewsAcknowledged" class="control-label"></label>
-                <input asp-for="Reviewer.ReviewsAcknowledged" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reviewer.ReviewsAcknowledged" /> @Html.DisplayNameFor(model => model.Reviewer.ReviewsAcknowledged)
+                </label>
                 <span asp-validation-for="Reviewer.ReviewsAcknowledged" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {
