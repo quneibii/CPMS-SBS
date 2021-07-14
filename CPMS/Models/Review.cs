@@ -137,7 +137,7 @@ namespace CPMS.Models
 
 
         [Required]
-        public bool? Complete { get; set; }
+        public bool Complete { get; set; }
 
         [ForeignKey(nameof(PaperId))]
         [InverseProperty("Review")]

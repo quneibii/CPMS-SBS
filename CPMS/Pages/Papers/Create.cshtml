@@ -13,215 +13,333 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="Paper.AuthorId" class="control-label"></label>
-                <select asp-for="Paper.AuthorId" class ="form-control" asp-items="ViewBag.AuthorId"></select>
+                <select asp-for="Paper.AuthorId" class="form-control" asp-items="ViewBag.AuthorId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Active" class="control-label"></label>
-                <input asp-for="Paper.Active" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Active" /> @Html.DisplayNameFor(model => model.Paper.Active)
+                </label>
                 <span asp-validation-for="Paper.Active" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.FilenameOriginal" class="control-label"></label>
                 <input asp-for="Paper.FilenameOriginal" class="form-control" />
                 <span asp-validation-for="Paper.FilenameOriginal" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.Filename" class="control-label"></label>
                 <input asp-for="Paper.Filename" class="form-control" />
                 <span asp-validation-for="Paper.Filename" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.Title" class="control-label"></label>
                 <input asp-for="Paper.Title" class="form-control" />
                 <span asp-validation-for="Paper.Title" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.Certification" class="control-label"></label>
                 <input asp-for="Paper.Certification" class="form-control" />
                 <span asp-validation-for="Paper.Certification" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.NotesToReviewers" class="control-label"></label>
                 <input asp-for="Paper.NotesToReviewers" class="form-control" />
                 <span asp-validation-for="Paper.NotesToReviewers" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.AnalysisOfAlgorithms" class="control-label"></label>
-                <input asp-for="Paper.AnalysisOfAlgorithms" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.AnalysisOfAlgorithms" /> @Html.DisplayNameFor(model => model.Paper.AnalysisOfAlgorithms)
+                </label>
                 <span asp-validation-for="Paper.AnalysisOfAlgorithms" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Applications" class="control-label"></label>
-                <input asp-for="Paper.Applications" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Applications" /> @Html.DisplayNameFor(model => model.Paper.Applications)
+                </label>
                 <span asp-validation-for="Paper.Applications" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Architecture" class="control-label"></label>
-                <input asp-for="Paper.Architecture" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Architecture" /> @Html.DisplayNameFor(model => model.Paper.Architecture)
+                </label>
                 <span asp-validation-for="Paper.Architecture" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.ArtificialIntelligence" class="control-label"></label>
-                <input asp-for="Paper.ArtificialIntelligence" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.ArtificialIntelligence" /> @Html.DisplayNameFor(model => model.Paper.ArtificialIntelligence)
+                </label>
                 <span asp-validation-for="Paper.ArtificialIntelligence" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.ComputerEngineering" class="control-label"></label>
-                <input asp-for="Paper.ComputerEngineering" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.ComputerEngineering" /> @Html.DisplayNameFor(model => model.Paper.ComputerEngineering)
+                </label>
                 <span asp-validation-for="Paper.ComputerEngineering" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Curriculum" class="control-label"></label>
-                <input asp-for="Paper.Curriculum" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Curriculum" /> @Html.DisplayNameFor(model => model.Paper.Curriculum)
+                </label>
                 <span asp-validation-for="Paper.Curriculum" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.DataStructures" class="control-label"></label>
-                <input asp-for="Paper.DataStructures" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.DataStructures" /> @Html.DisplayNameFor(model => model.Paper.DataStructures)
+                </label>
                 <span asp-validation-for="Paper.DataStructures" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Databases" class="control-label"></label>
-                <input asp-for="Paper.Databases" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Databases" /> @Html.DisplayNameFor(model => model.Paper.Databases)
+                </label>
                 <span asp-validation-for="Paper.Databases" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.DistanceLearning" class="control-label"></label>
-                <input asp-for="Paper.DistanceLearning" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.DistanceLearning" /> @Html.DisplayNameFor(model => model.Paper.DistanceLearning)
+                </label>
                 <span asp-validation-for="Paper.DistanceLearning" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.DistributedSystems" class="control-label"></label>
-                <input asp-for="Paper.DistributedSystems" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.DistributedSystems" /> @Html.DisplayNameFor(model => model.Paper.DistributedSystems)
+                </label>
                 <span asp-validation-for="Paper.DistributedSystems" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.EthicalSocietalIssues" class="control-label"></label>
-                <input asp-for="Paper.EthicalSocietalIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.EthicalSocietalIssues" /> @Html.DisplayNameFor(model => model.Paper.EthicalSocietalIssues)
+                </label>
                 <span asp-validation-for="Paper.EthicalSocietalIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.FirstYearComputing" class="control-label"></label>
-                <input asp-for="Paper.FirstYearComputing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.FirstYearComputing" /> @Html.DisplayNameFor(model => model.Paper.FirstYearComputing)
+                </label>
                 <span asp-validation-for="Paper.FirstYearComputing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.GenderIssues" class="control-label"></label>
-                <input asp-for="Paper.GenderIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.GenderIssues" /> @Html.DisplayNameFor(model => model.Paper.GenderIssues)
+                </label>
                 <span asp-validation-for="Paper.GenderIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.GrantWriting" class="control-label"></label>
-                <input asp-for="Paper.GrantWriting" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.GrantWriting" /> @Html.DisplayNameFor(model => model.Paper.GrantWriting)
+                </label>
                 <span asp-validation-for="Paper.GrantWriting" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.GraphicsImageProcessing" class="control-label"></label>
-                <input asp-for="Paper.GraphicsImageProcessing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.GraphicsImageProcessing" /> @Html.DisplayNameFor(model => model.Paper.GraphicsImageProcessing)
+                </label>
                 <span asp-validation-for="Paper.GraphicsImageProcessing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.HumanComputerInteraction" class="control-label"></label>
-                <input asp-for="Paper.HumanComputerInteraction" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.HumanComputerInteraction" /> @Html.DisplayNameFor(model => model.Paper.HumanComputerInteraction)
+                </label>
                 <span asp-validation-for="Paper.HumanComputerInteraction" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.LaboratoryEnvironments" class="control-label"></label>
-                <input asp-for="Paper.LaboratoryEnvironments" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.LaboratoryEnvironments" /> @Html.DisplayNameFor(model => model.Paper.LaboratoryEnvironments)
+                </label>
                 <span asp-validation-for="Paper.LaboratoryEnvironments" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Literacy" class="control-label"></label>
-                <input asp-for="Paper.Literacy" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Literacy" /> @Html.DisplayNameFor(model => model.Paper.Literacy)
+                </label>
                 <span asp-validation-for="Paper.Literacy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.MathematicsInComputing" class="control-label"></label>
-                <input asp-for="Paper.MathematicsInComputing" class="form-control" />
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.MathematicsInComputing" /> @Html.DisplayNameFor(model => model.Paper.MathematicsInComputing)
+                </label>
                 <span asp-validation-for="Paper.MathematicsInComputing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Multimedia" class="control-label"></label>
-                <input asp-for="Paper.Multimedia" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Multimedia" /> @Html.DisplayNameFor(model => model.Paper.Multimedia)
+                </label>
                 <span asp-validation-for="Paper.Multimedia" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.NetworkingDataCommunications" class="control-label"></label>
-                <input asp-for="Paper.NetworkingDataCommunications" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.NetworkingDataCommunications" /> @Html.DisplayNameFor(model => model.Paper.NetworkingDataCommunications)
+                </label>
                 <span asp-validation-for="Paper.NetworkingDataCommunications" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.NonMajorCourses" class="control-label"></label>
-                <input asp-for="Paper.NonMajorCourses" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.NonMajorCourses" /> @Html.DisplayNameFor(model => model.Paper.NonMajorCourses)
+                </label>
                 <span asp-validation-for="Paper.NonMajorCourses" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.ObjectOrientedIssues" class="control-label"></label>
-                <input asp-for="Paper.ObjectOrientedIssues" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.ObjectOrientedIssues" /> @Html.DisplayNameFor(model => model.Paper.ObjectOrientedIssues)
+                </label>
                 <span asp-validation-for="Paper.ObjectOrientedIssues" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.OperatingSystems" class="control-label"></label>
-                <input asp-for="Paper.OperatingSystems" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.OperatingSystems" /> @Html.DisplayNameFor(model => model.Paper.OperatingSystems)
+                </label>
                 <span asp-validation-for="Paper.OperatingSystems" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.ParallelsProcessing" class="control-label"></label>
-                <input asp-for="Paper.ParallelsProcessing" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.ParallelsProcessing" /> @Html.DisplayNameFor(model => model.Paper.ParallelsProcessing)
+                </label>
                 <span asp-validation-for="Paper.ParallelsProcessing" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Pedagogy" class="control-label"></label>
-                <input asp-for="Paper.Pedagogy" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Pedagogy" /> @Html.DisplayNameFor(model => model.Paper.Pedagogy)
+                </label>
                 <span asp-validation-for="Paper.Pedagogy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.ProgrammingLanguages" class="control-label"></label>
-                <input asp-for="Paper.ProgrammingLanguages" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.ProgrammingLanguages" /> @Html.DisplayNameFor(model => model.Paper.ProgrammingLanguages)
+                </label>
                 <span asp-validation-for="Paper.ProgrammingLanguages" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Research" class="control-label"></label>
-                <input asp-for="Paper.Research" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Research" /> @Html.DisplayNameFor(model => model.Paper.Research)
+                </label>
                 <span asp-validation-for="Paper.Research" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Security" class="control-label"></label>
-                <input asp-for="Paper.Security" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Security" /> @Html.DisplayNameFor(model => model.Paper.Security)
+                </label>
                 <span asp-validation-for="Paper.Security" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.SoftwareEngineering" class="control-label"></label>
-                <input asp-for="Paper.SoftwareEngineering" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.SoftwareEngineering" /> @Html.DisplayNameFor(model => model.Paper.SoftwareEngineering)
+                </label>
                 <span asp-validation-for="Paper.SoftwareEngineering" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.SystemsAnalysisAndDesign" class="control-label"></label>
-                <input asp-for="Paper.SystemsAnalysisAndDesign" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.SystemsAnalysisAndDesign" /> @Html.DisplayNameFor(model => model.Paper.SystemsAnalysisAndDesign)
+                </label>
                 <span asp-validation-for="Paper.SystemsAnalysisAndDesign" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.UsingTechnologyInTheClassroom" class="control-label"></label>
-                <input asp-for="Paper.UsingTechnologyInTheClassroom" class="form-control" />
-                <span asp-validation-for="Paper.UsingTechnologyInTheClassroom" class="text-danger"></span>
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.UsingTechnologyInTheClassroom" /> @Html.DisplayNameFor(model => model.Paper.UsingTechnologyInTheClassroom)
+                </label>
             </div>
+
+
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Paper.WebAndInternetProgramming" /> @Html.DisplayNameFor(model => model.Paper.WebAndInternetProgramming)
                 </label>
+                <span asp-validation-for="Paper.WebAndInternetProgramming" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Paper.Other" class="control-label"></label>
-                <input asp-for="Paper.Other" class="form-control" />
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paper.Other" /> @Html.DisplayNameFor(model => model.Paper.Other)
+                </label>
                 <span asp-validation-for="Paper.Other" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Paper.OtherDescription" class="control-label"></label>
                 <input asp-for="Paper.OtherDescription" class="form-control" />
                 <span asp-validation-for="Paper.OtherDescription" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
