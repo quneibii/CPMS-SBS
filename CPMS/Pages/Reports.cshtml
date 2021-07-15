@@ -4,5 +4,14 @@
     ViewData["Title"] = "Reports";
 }
 <h1>@ViewData["Title"]</h1>
+<!-- if user is not admin, show "You do not have access to this feature."-->
+<!-- else:-->
+<div>
+    <h1>Reports</h1>
+    <hr />
 
-<p>Use this page to view reports.</p>
+    <button type="button">Generate Reviews Summary Report</button>
+    <button type="button">Generate Authors Report</button>
+    <button type="button">Generate Reviewers Report</button>
+    <button type="button">Generate Reviewers Comments Report</button>
+</div>
