@@ -4,30 +4,5 @@
     ViewData["Title"] = "Reports";
 }
 <h1>@ViewData["Title"]</h1>
-<!-- if user is not admin, show "You do not have access to this feature."-->
-    <!-- <p> You do not have access to this page.</p>-->
-<!-- else:-->
-<div>
 
-    <!-- View reports-->
-    <p>
-        <a asp-page="./Reviews/Index">View Review Summary Report</a>
-    </p>
-    <p>
-        <a asp-page="./Authors/Index">View Authors Report</a>
-    </p>
-    <p>
-        <a asp-page="./Reviewers/Index">View Reviewers Report</a>
-    </p>
-    <p>
-        <a asp-page="./Reviews/Index">View Review Comments Report</a>
-    </p>
-
-    <!--Match papers with reviewers-->
-    <!--Turn On/Off paper and review Acceptance-->
-    <input type="checkbox" id="PaperAcceptance" name="Disable Paper Submission">
-    <label for="PaperAcceptance"> Disable Paper Submission</label><br>
-
-    <input type="checkbox" id="ReviewAcceptance" name="Disable Review Submission">
-    <label for="ReviewAcceptance"> Disable Review Submission</label><br>
-</div>
+<p>Use this page to view reports.</p>

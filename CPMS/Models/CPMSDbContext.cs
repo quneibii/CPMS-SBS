@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -314,6 +315,11 @@ namespace CPMS.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
+        }
+
+        internal object Database(string author, SqlParameter emailParameter, SqlParameter passwordParameter)
+        {
+            throw new NotImplementedException();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

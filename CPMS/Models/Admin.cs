@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CPMS.Models
 {
-    public class Admin 
+    public class Admin
     {
         public string EmailAddress = "admin@cpms.com";
         public string Password = "bulls";

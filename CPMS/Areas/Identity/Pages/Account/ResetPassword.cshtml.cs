@@ -17,10 +17,6 @@ namespace CPMS.Areas.Identity.Pages.Account
     {
         private readonly UserManager<IdentityUser> _userManager;
 
-        public ResetPasswordModel(UserManager<IdentityUser> userManager)
-        {
-            _userManager = userManager;
-        }
 
         [BindProperty]
         public InputModel Input { get; set; }
