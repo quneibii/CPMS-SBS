@@ -55,6 +55,7 @@ namespace CPMS
                 options.Conventions.AuthorizeFolder("/Papers");
                 options.Conventions.AuthorizeFolder("/Reviews");
                 options.Conventions.AuthorizeFolder("/Reviewers");
+                options.Conventions.AuthorizePage("/Reports");
             });
 
         }

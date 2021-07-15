@@ -6,6 +6,8 @@
 }
 
 <h1>Papers</h1>
+<!--If user is a reviewer, allow them to download the files as well-->
+
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -143,140 +145,141 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Paper) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FilenameOriginal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Filename)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Certification)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NotesToReviewers)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AnalysisOfAlgorithms)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Applications)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Architecture)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArtificialIntelligence)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ComputerEngineering)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Curriculum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataStructures)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Databases)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DistanceLearning)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DistributedSystems)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EthicalSocietalIssues)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstYearComputing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GenderIssues)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GrantWriting)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GraphicsImageProcessing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HumanComputerInteraction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LaboratoryEnvironments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Literacy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MathematicsInComputing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Multimedia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NetworkingDataCommunications)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NonMajorCourses)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjectOrientedIssues)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OperatingSystems)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ParallelsProcessing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pedagogy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgrammingLanguages)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Research)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Security)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoftwareEngineering)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SystemsAnalysisAndDesign)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsingTechnologyInTheClassroom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WebAndInternetProgramming)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OtherDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author.AuthorId)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.PaperId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.PaperId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PaperId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Paper)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilenameOriginal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Filename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Certification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotesToReviewers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnalysisOfAlgorithms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Applications)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Architecture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArtificialIntelligence)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComputerEngineering)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Curriculum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataStructures)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Databases)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistanceLearning)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistributedSystems)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EthicalSocietalIssues)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstYearComputing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GenderIssues)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrantWriting)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GraphicsImageProcessing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HumanComputerInteraction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaboratoryEnvironments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Literacy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MathematicsInComputing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Multimedia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NetworkingDataCommunications)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NonMajorCourses)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ObjectOrientedIssues)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OperatingSystems)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParallelsProcessing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pedagogy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgrammingLanguages)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Research)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Security)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoftwareEngineering)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SystemsAnalysisAndDesign)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsingTechnologyInTheClassroom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WebAndInternetProgramming)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Other)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtherDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.AuthorId)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.PaperId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.PaperId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.PaperId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
