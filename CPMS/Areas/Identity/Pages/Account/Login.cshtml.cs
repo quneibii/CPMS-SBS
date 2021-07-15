@@ -74,8 +74,6 @@ namespace CPMS.Areas.Identity.Pages.Account
 
             string AuthorLogin = "dbo.spAuthorLogin 	@EmailAddress, @Password, @RowCount, @AuthorID, @FirstName, @User";
 
-            AuthorLogin = "SELECT @AuthorID = AuthorID, @FirstName = FirstName, @User = FirstName + ' ' + MiddleInitial + ' ' + LastName " +
-                "FROM Author WHERE EmailAddress = @EmailAddress AND Password = @Password;";
 
             using (SqlConnection SqlAuthor = new SqlConnection(configuration.GetConnectionString("CPMS")))
             {
@@ -88,7 +86,7 @@ namespace CPMS.Areas.Identity.Pages.Account
 
                     Command.Parameters.Add(EmailParameter);
                     Command.Parameters.Add(PasswordParameter);
-                    //Command.Parameters.Add("@RowCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    Command.Parameters.Add("@RowCount", SqlDbType.Int).Direction = ParameterDirection.Output;
                     Command.Parameters.Add("@AuthorID", SqlDbType.Int).Direction = ParameterDirection.Output;
                     Command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
                     Command.Parameters.Add("@User", SqlDbType.NVarChar, 100).Direction = ParameterDirection.Output;
