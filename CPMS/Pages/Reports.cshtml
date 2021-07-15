@@ -5,13 +5,26 @@
 }
 <h1>@ViewData["Title"]</h1>
 <!-- if user is not admin, show "You do not have access to this feature."-->
+    <!-- <p> You do not have access to this feature.</p>-->
 <!-- else:-->
 <div>
     <h1>Reports</h1>
     <hr />
 
-    <button type="button">Generate Reviews Summary Report</button>
-    <button type="button">Generate Authors Report</button>
-    <button type="button">Generate Reviewers Report</button>
-    <button type="button">Generate Reviewers Comments Report</button>
+    <!-- View reports-->
+    <p>
+        <a asp-page="./Reviews/Index">View Review Summary Report</a>
+    </p>
+    <p>
+        <a asp-page="./Authors/Index">View Authors Report</a>
+    </p>
+    <p>
+        <a asp-page="./Reviewers/Index">View Reviewers Report</a>
+    </p>
+    <p>
+        <a asp-page="./Reviews/Index">View Review Comments Report</a>
+    </p>
+    
+    
+    
 </div>
