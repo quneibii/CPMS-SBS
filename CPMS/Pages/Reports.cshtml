@@ -5,11 +5,9 @@
 }
 <h1>@ViewData["Title"]</h1>
 <!-- if user is not admin, show "You do not have access to this feature."-->
-    <!-- <p> You do not have access to this feature.</p>-->
+    <!-- <p> You do not have access to this page.</p>-->
 <!-- else:-->
 <div>
-    <h1>Reports</h1>
-    <hr />
 
     <!-- View reports-->
     <p>
@@ -24,7 +22,12 @@
     <p>
         <a asp-page="./Reviews/Index">View Review Comments Report</a>
     </p>
-    
-    
-    
+
+    <!--Match papers with reviewers-->
+    <!--Turn On/Off paper and review Acceptance-->
+    <input type="checkbox" id="PaperAcceptance" name="Disable Paper Submission">
+    <label for="PaperAcceptance"> Disable Paper Submission</label><br>
+
+    <input type="checkbox" id="ReviewAcceptance" name="Disable Review Submission">
+    <label for="ReviewAcceptance"> Disable Review Submission</label><br>
 </div>
